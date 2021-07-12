@@ -1,0 +1,57 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+<MyTile@SmartTileWithStar>
+    size_hint_y: None
+    height: "140dp"
+<Painel>
+    id: painel
+    name: 'painel'
+    MDBoxLayout:
+        orientation: "vertical"
+    
+        MDToolbar:
+            title: "ENGESEP - Relatórios"
+            md_bg_color: rail.md_bg_color
+            left_action_items: [["menu", lambda x: app.rail_open()]]
+    
+        MDBoxLayout:
+            MDNavigationRail:
+                id: rail
+                adaptive_size: True
+                md_bg_color: get_color_from_hex("#1C1C1C")
+                color_normal: get_color_from_hex("#718089")
+                color_active: get_color_from_hex("#f3ab44")
+                use_resizeable: True
+                MDNavigationRailItem:
+                    icon: "home"
+                    text: "Início"
+            MDBoxLayout:
+                padding: "24dp"
+                orientation: "vertical"
+                canvas:
+                    Color:
+                        rgba:get_color_from_hex("#FFFAFA")
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                MDToolbar:
+                    title: "Relatório detalhado "
+                    left_action_items: [["file-pdf"]]
+                    size_hint_y: None
+                    height: "50dp"
+                    md_bg_color: get_color_from_hex("#4F4F4F")
+                    left_action_items:
+                    MDRaisedButton:
+                        id: button2
+                        text: "gerar"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        md_bg_color: get_color_from_hex("#A9A9A9")
+                        on_press: root.dialog_config()
+                ScrollView:
+                    MDList:
+                        id: box
+                        cols: 3
+                        spacing: "5dp"
+
+
+
+

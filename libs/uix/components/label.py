@@ -21,6 +21,7 @@ class AutoScaleLabel(MDLabel):
     """
 
     auto_scale = BooleanProperty(True)
+    teste = BooleanProperty(True)
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

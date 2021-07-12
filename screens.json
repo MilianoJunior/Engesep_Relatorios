@@ -1,7 +1,7 @@
 {
-    "home": {
-        "import": "from libs.uix.baseclass.home_screen import HomeScreen",
-        "kv": "libs/uix/kv/home_screen.kv",
-        "object": "HomeScreen()"
+    "painel": {
+        "import": "from libs.uix.baseclass.painel import Painel",
+        "kv": "libs/uix/kv/painel.kv",
+        "object": "Painel()"
     }
 }

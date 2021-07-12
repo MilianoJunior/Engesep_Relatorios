@@ -1,0 +1,99 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+<Check@MDCheckbox>:
+    group: 'group'
+    size_hint: None, None
+    size: dp(38), dp(38)
+<Check_two@MDCheckbox>:
+    group: 'group_two'
+    size_hint: None, None
+    size: dp(38), dp(38)
+<Check_tree@MDCheckbox>:
+    size_hint: None, None
+    size: dp(38), dp(38)
+    
+<config_print>
+    orientation: "vertical"
+    size_hint_y: None
+    height: "380dp"
+    padding: [10, 10, 10, 10]
+    md_bg_color: get_color_from_hex("#3E9BC8")
+    BoxLayout:
+        id: box_periodo
+        orientation: "vertical"
+        padding: [10, 10, 10, 10]
+        MDLabel:
+            text: "Selecione um período"
+            theme_text_color: 'Secondary'
+            size_hint_y: None
+            height: self.texture_size[1]
+        ScrollView:
+            MDList:
+                id: periodo
+                cols: 3
+                spacing: "1dp"
+                OneLineAvatarIconListItem:
+                    text: "Diário"
+                    padding: [0, 10, 0, 10]
+                    Check:
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                        on_active: app.callback(self,'Diário',self.active)
+                OneLineAvatarIconListItem:
+                    text: "Mensal"
+                    padding: [0, 10, 0, 10]
+                    Check:
+                        active: True
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                        on_active: app.callback(self,'Mensal',self.active)
+                OneLineAvatarIconListItem:
+                    text: "Anual"
+                    padding: [0, 10, 0, 10]
+                    Check:
+                        pos_hint: {'center_x': .1, 'center_y': .5}
+                        on_active: app.callback(self,'Anual',self.active)
+    BoxLayout:
+        id: box_tempo
+        orientation: "vertical"
+        padding: [10, 10, 10, 10]
+        MDLabel:
+            text: "Selecione um intervalo de tempo"
+            theme_text_color: 'Secondary'
+            size_hint_y: None
+            height: self.texture_size[1]
+        MDList:
+            cols: 2
+            spacing: "5dp"
+            OneLineAvatarIconListItem:
+                text: "Todos os dados"
+                Check_two:
+                    active: True
+                    pos_hint: {'center_x': .1, 'center_y': .5}
+                    on_active: app.callback_two(self,'Todos os dados',self.active)
+            OneLineAvatarIconListItem:
+                text: "Personalizado"
+                Check_two:
+                    pos_hint: {'center_x': .1, 'center_y': .5}
+                    on_active: app.callback_two(self,'Personalizado',self.active)
+    BoxLayout:
+        id: box_turbina
+        orientation: "vertical"
+        padding: [10, 10, 10, 10]
+        MDLabel:
+            text: "Selecione a(s) Turbina(s)"
+            theme_text_color: 'Secondary'
+            size_hint_y: None
+            height: self.texture_size[1]
+        MDList:
+            cols: 2
+            spacing: "5dp"
+            OneLineAvatarIconListItem:
+                text: "UG-01"
+                Check_tree:
+                    active:True
+                    pos_hint: {'center_x': .1, 'center_y': .5}
+                    on_active: app.callback_tree(self,'UG-01',self.active)
+            OneLineAvatarIconListItem:
+                text: "UG-02"
+                Check_tree:
+                    active: True
+                    pos_hint: {'center_x': .1, 'center_y': .5}
+                    on_active: app.callback_tree(self,'UG-02',self.active)

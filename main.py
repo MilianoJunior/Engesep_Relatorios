@@ -9,6 +9,9 @@ import traceback  # NOQA: E402
 
 from kivy.factory import Factory  # NOQA: E402
 from relatorios import Relatorios  # NOQA: E402
+print('--------------------------------------')
+print('root_dir: ',root_dir)
+print('--------------------------------------')
 
 __version__ = "1"
 
@@ -21,8 +24,8 @@ with open("factory_registers.json") as fd:
     custom_widgets = json.load(fd)
     for module, _classes in custom_widgets.items():
         for _class in _classes:
+            print(_class)
             r(_class, module=module)
-
 
 try:
     Relatorios().run()

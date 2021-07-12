@@ -20,7 +20,6 @@ class Root(ScreenManager):
         """
         Adding the screens to the Root (ScreenManager).
         """
-
     def add_screens(self, interval):
         """
         If you need to use more screens in your app,
@@ -44,11 +43,20 @@ class Root(ScreenManager):
             screens = json.load(f)
 
         for screen_name in screens.keys():
+            print('-------------------')
+            print(screen_name)
+            print('--------------')
             screen_details = screens[screen_name]
             Builder.load_file(screen_details["kv"])
             exec(screen_details["import"])  # excecuting imports
             screen_object = eval(screen_details["object"])  # calling it
             screen_object.name = screen_name  # giving the name of the screen
+            # print('00000000000000000000000000')
+            # print(screen_object)
+            # for js in dir(screen_object):
+            #     print(type(getattr(screen_object,js)))
+            #     print(getattr(screen_object,js))
+            #     print('55555555555555555555555555')
             self.add_widget(
                 screen_object
             )  # finally adding it to the screen manager

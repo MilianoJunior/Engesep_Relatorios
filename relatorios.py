@@ -7,8 +7,11 @@ import platform
 
 from kivy.core.window import Window
 from kivymd.app import MDApp
+from kivymd.uix.list import ThreeLineIconListItem, IconLeftWidget
+from libs.applibs.banco_de_dados.db import Db
 
 from libs.uix.baseclass.root import Root
+
 
 # This is needed for supporting Windows 10 with OpenGL < v2.0
 if platform.system() == "Windows":
@@ -31,3 +34,15 @@ class Relatorios(MDApp):  # NOQA: N801
 
     def build(self):
         return Root()
+        
+    def show_confirmation_dialog(self):
+        print('painel 2')
+        
+    def on_start(self):
+        pass
+    def on_stop(self,*largs):
+        print('fechando')
+    def impressao(self,dt):
+        print('imprimindo 2')
+
+        

@@ -4,7 +4,7 @@ HotReloader
 Uses kaki module for Hot Reload (limited to some uses cases).
 Before using, install kaki by `pip install kaki`
 
-"""
+
 
 
 import os
@@ -69,3 +69,4 @@ class Relatorios(MDApp, HotReloaderApp):  # NOQA: N801
 
 if __name__ == "__main__":
     Relatorios().run()
+"""
