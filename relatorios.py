@@ -35,14 +35,4 @@ class Relatorios(MDApp):  # NOQA: N801
     def build(self):
         return Root()
         
-    def show_confirmation_dialog(self):
-        print('painel 2')
-        
-    def on_start(self):
-        pass
-    def on_stop(self,*largs):
-        print('fechando')
-    def impressao(self,dt):
-        print('imprimindo 2')
-
         

@@ -1,4 +1,27 @@
 Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\lang\builder.py", line 701, in _apply_rule
+    setattr(widget_set, key, value)
+  File "kivy\weakproxy.pyx", line 35, in kivy.weakproxy.WeakProxy.__setattr__
+  File "kivy\properties.pyx", line 498, in kivy.properties.Property.__set__
+  File "kivy\properties.pyx", line 545, in kivy.properties.Property.set
+  File "kivy\properties.pyx", line 600, in kivy.properties.Property.dispatch
+  File "kivy\_event.pyx", line 1248, in kivy._event.EventObservers.dispatch
+  File "kivy\_event.pyx", line 1130, in kivy._event.EventObservers._dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\label.py", line 354, in _trigger_texture_update
+    self._create_label()
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\label.py", line 347, in _create_label
+    self._label = CoreMarkupLabel(**dkw)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\core\text\markup.py", line 94, in __init__
+    super(MarkupLabel, self).__init__(*largs, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\core\text\__init__.py", line 288, in __init__
+    self.resolve_font_name()
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\core\text\__init__.py", line 356, in resolve_font_name
+    raise IOError('Label: File %r not found' % fontname)
+OSError: Label: File 'C:\\Engesep\relatorios\\Engesep_Relatorios\x07ssets\x0conts\\ZenTokyoZoo-Regular.ttf' not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "C:\Engesep\relatorios\Engesep_Relatorios\main.py", line 31, in <module>
     Relatorios().run()
   File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\app.py", line 950, in run
@@ -11,16 +34,124 @@ Traceback (most recent call last):
     self.dispatch_input()
   File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\base.py", line 342, in dispatch_input
     post_dispatch_input(*pop(0))
-  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\base.py", line 308, in post_dispatch_input
-    wid.dispatch('on_touch_up', me)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\base.py", line 248, in post_dispatch_input
+    listener.dispatch('on_motion', etype, me)
   File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
-  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 296, in on_touch_up
-    return super().on_touch_up(touch)
-  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\button.py", line 981, in on_touch_up
-    return super().on_touch_up(touch)
-  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\behaviors\button.py", line 179, in on_touch_up
-    self.dispatch('on_release')
-  File "kivy\_event.pyx", line 705, in kivy._event.EventDispatcher.dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\core\window\__init__.py", line 1412, in on_motion
+    self.dispatch('on_touch_down', me)
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\core\window\__init__.py", line 1428, in on_touch_down
+    if w.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\modalview.py", line 271, in on_touch_down
+    super(ModalView, self).on_touch_down(touch)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\widget.py", line 545, in on_touch_down
+    if child.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 255, in on_touch_down
+    super().on_touch_down(touch)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\behaviors\button.py", line 138, in on_touch_down
+    if super(ButtonBehavior, self).on_touch_down(touch):
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\widget.py", line 545, in on_touch_down
+    if child.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\widget.py", line 545, in on_touch_down
+    if child.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\widget.py", line 545, in on_touch_down
+    if child.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\widget.py", line 545, in on_touch_down
+    if child.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\widget.py", line 545, in on_touch_down
+    if child.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\list.py", line 844, in on_touch_down
+    super().on_touch_down(touch)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 255, in on_touch_down
+    super().on_touch_down(touch)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\behaviors\button.py", line 138, in on_touch_down
+    if super(ButtonBehavior, self).on_touch_down(touch):
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\widget.py", line 545, in on_touch_down
+    if child.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 255, in on_touch_down
+    super().on_touch_down(touch)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\behaviors\button.py", line 150, in on_touch_down
+    self._do_press()
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\behaviors\togglebutton.py", line 118, in _do_press
+    self.state = 'normal' if self.state == 'down' else 'down'
+  File "kivy\properties.pyx", line 498, in kivy.properties.Property.__set__
+  File "kivy\properties.pyx", line 545, in kivy.properties.Property.set
+  File "kivy\properties.pyx", line 600, in kivy.properties.Property.dispatch
   File "kivy\_event.pyx", line 1248, in kivy._event.EventObservers.dispatch
-  File "kivy\_event.pyx", line 1172, in kivy._event.EventObservers._dispatch
-TypeError: dialog_close() takes 1 positional argument but 2 were given
+  File "kivy\_event.pyx", line 1154, in kivy._event.EventObservers._dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\selectioncontrol.py", line 398, in on_state
+    self.active = True
+  File "kivy\properties.pyx", line 498, in kivy.properties.Property.__set__
+  File "kivy\properties.pyx", line 545, in kivy.properties.Property.set
+  File "kivy\properties.pyx", line 600, in kivy.properties.Property.dispatch
+  File "kivy\_event.pyx", line 1248, in kivy._event.EventObservers.dispatch
+  File "kivy\_event.pyx", line 1130, in kivy._event.EventObservers._dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\lang\builder.py", line 57, in custom_callback
+    exec(__kvlang__.co_value, idmap)
+  File "<string>", line 75, in <module>
+  File "C:\Engesep\relatorios\Engesep_Relatorios\libs\uix\components\print.py", line 43, in callback_personalizado
+    date_dialog = MDDatePicker(mode="range",
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\picker.py", line 1463, in __init__
+    super().__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\picker.py", line 1078, in __init__
+    super().__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\theming.py", line 1140, in __init__
+    super().__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\modalview.py", line 187, in __init__
+    super(ModalView, self).__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\anchorlayout.py", line 68, in __init__
+    super(AnchorLayout, self).__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\layout.py", line 76, in __init__
+    super(Layout, self).__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\behaviors\elevation.py", line 1350, in __init__
+    super().__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\behaviors\backgroundcolor_behavior.py", line 220, in __init__
+    super().__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\behaviors\backgroundcolor_behavior.py", line 178, in __init__
+    super().__init__(**kwarg)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivymd\uix\behaviors\elevation.py", line 847, in __init__
+    super().__init__(**kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\widget.py", line 359, in __init__
+    self.apply_class_lang_rules(
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\widget.py", line 463, in apply_class_lang_rules
+    Builder.apply(
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\lang\builder.py", line 541, in apply
+    self._apply_rule(
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\lang\builder.py", line 710, in _apply_rule
+    raise BuilderException(rule.ctx, rule.line,
+kivy.lang.builder.BuilderException: Parser: File "<inline>", line 73:
+...
+     71:            adaptive_height: True
+     72:            font_name: root.font_name
+>>   73:            markup: True
+     74:            pos:
+     75:                (dp(24), root.height - dp(120) + dp(18))                 if root.theme_cls.device_orientation == "portrait"                 else                 (                 dp(24) if not root._input_date_dialog_open else dp(168) + dp(24),                 root.height - self.height - dp(96)                 )
+...
+OSError: Label: File 'C:\\Engesep\relatorios\\Engesep_Relatorios\x07ssets\x0conts\\ZenTokyoZoo-Regular.ttf' not found
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\lang\builder.py", line 701, in _apply_rule
+    setattr(widget_set, key, value)
+  File "kivy\weakproxy.pyx", line 35, in kivy.weakproxy.WeakProxy.__setattr__
+  File "kivy\properties.pyx", line 498, in kivy.properties.Property.__set__
+  File "kivy\properties.pyx", line 545, in kivy.properties.Property.set
+  File "kivy\properties.pyx", line 600, in kivy.properties.Property.dispatch
+  File "kivy\_event.pyx", line 1248, in kivy._event.EventObservers.dispatch
+  File "kivy\_event.pyx", line 1130, in kivy._event.EventObservers._dispatch
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\label.py", line 354, in _trigger_texture_update
+    self._create_label()
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\uix\label.py", line 347, in _create_label
+    self._label = CoreMarkupLabel(**dkw)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\core\text\markup.py", line 94, in __init__
+    super(MarkupLabel, self).__init__(*largs, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\core\text\__init__.py", line 288, in __init__
+    self.resolve_font_name()
+  File "C:\ProgramData\Anaconda3\envs\engesep_relatorios\lib\site-packages\kivy\core\text\__init__.py", line 356, in resolve_font_name
+    raise IOError('Label: File %r not found' % fontname)
+

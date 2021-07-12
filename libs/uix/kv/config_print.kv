@@ -36,20 +36,20 @@
                     padding: [0, 10, 0, 10]
                     Check:
                         pos_hint: {'center_x': .1, 'center_y': .5}
-                        on_active: app.callback(self,'Diário',self.active)
+                        on_active: root.callback_select(self,'Diário',self.active)
                 OneLineAvatarIconListItem:
                     text: "Mensal"
                     padding: [0, 10, 0, 10]
                     Check:
                         active: True
                         pos_hint: {'center_x': .1, 'center_y': .5}
-                        on_active: app.callback(self,'Mensal',self.active)
+                        on_active: root.callback_select(self,'Mensal',self.active)
                 OneLineAvatarIconListItem:
                     text: "Anual"
                     padding: [0, 10, 0, 10]
                     Check:
                         pos_hint: {'center_x': .1, 'center_y': .5}
-                        on_active: app.callback(self,'Anual',self.active)
+                        on_active: root.callback_select(self,'Anual',self.active)
     BoxLayout:
         id: box_tempo
         orientation: "vertical"
@@ -63,16 +63,16 @@
             cols: 2
             spacing: "5dp"
             OneLineAvatarIconListItem:
-                text: "Todos os dados"
+                text: "Todos os Dados"
                 Check_two:
                     active: True
                     pos_hint: {'center_x': .1, 'center_y': .5}
-                    on_active: app.callback_two(self,'Todos os dados',self.active)
+                    on_active: root.callback_select(self,'Todos os Dados',self.active)
             OneLineAvatarIconListItem:
                 text: "Personalizado"
                 Check_two:
                     pos_hint: {'center_x': .1, 'center_y': .5}
-                    on_active: app.callback_two(self,'Personalizado',self.active)
+                    on_active: root.callback_personalizado(self,'Personalizado',self.active)
     BoxLayout:
         id: box_turbina
         orientation: "vertical"
@@ -90,10 +90,10 @@
                 Check_tree:
                     active:True
                     pos_hint: {'center_x': .1, 'center_y': .5}
-                    on_active: app.callback_tree(self,'UG-01',self.active)
+                    on_active: root.callback_select(self,'UG-01',self.active)
             OneLineAvatarIconListItem:
                 text: "UG-02"
                 Check_tree:
                     active: True
                     pos_hint: {'center_x': .1, 'center_y': .5}
-                    on_active: app.callback_tree(self,'UG-02',self.active)
+                    on_active: root.callback_select(self,'UG-02',self.active)

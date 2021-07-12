@@ -2,9 +2,10 @@ from kivymd.uix.screen import MDScreen
 from kivy.clock import Clock
 from kivymd.uix.list import ThreeLineIconListItem, IconLeftWidget
 from libs.applibs.banco_de_dados.db import Db
-from libs.uix.components.print import config_print
+from libs.uix.components.print import Config_print
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.button import MDFlatButton
+
 
 class Painel(MDScreen):
     dialog = None
@@ -37,13 +38,12 @@ class Painel(MDScreen):
             self.ids.box.add_widget(self.listItem)
             #---------------------------------------------------------------------------------------------------------
     def dialog_config(self):
-        print('Testando')
-        print(self.height)
         if not self.dialog:
+            print('ate dialog')
             self.dialog = MDDialog(
                 title="Configurações para gerar o relatório",
                 type="custom",
-                content_cls=config_print(),
+                content_cls=Config_print(self.object_db),
                 buttons=[
                     MDFlatButton(
                         text="Cancelar",
@@ -60,6 +60,8 @@ class Painel(MDScreen):
         self.dialog.open()
     def dialog_close(self,dt):
         print('fechando')
-    def impressao(self,dt):
+        self.dialog.dismiss()
         
+    def impressao(self,dt):
+        self.dialog.dismiss()
         print('imprimindo 1 ')
